@@ -1,0 +1,15 @@
+* {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    text-align: center;
+    justify-content: center;
+}
+
+#l1,
+#l2,
+#l3 {
+    margin-top: 5px;
+}

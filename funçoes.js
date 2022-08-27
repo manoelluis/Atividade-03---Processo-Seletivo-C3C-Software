@@ -7,15 +7,17 @@ const calcular = document.querySelector("#calcular");
 calcular.onclick = () => {
   if (l1.value == "" || l2.value == "" || l3.value == "") {
     alert("Preencha todos os campos");
+  } else if (l1.value < 1 || l2.value < 1 || l3.value < 1) {
+    alert("Não são permitidos números negativos ou menores que 1!");
   } else if (l1.value == l2.value && l1.value == l3.value) {
-    resultado.value = "equilátero";
+    resultado.value = "Equilátero";
   } else if (
     l1.value == l2.value ||
     l2.value == l3.value ||
     l1.value == l3.value
   ) {
-    resultado.value = "isóceles";
+    resultado.value = "Isósceles";
   } else {
-    resultado.value = "escaleno";
+    resultado.value = "Escaleno";
   }
 };
