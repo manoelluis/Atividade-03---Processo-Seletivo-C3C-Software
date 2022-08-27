@@ -12,6 +12,6 @@ calcular.onclick = () => {
 
     resultado.value = `Valor1: ${v1.toFixed(3)}, Valor2: ${v2.toFixed(3)}`;
   } else {
-    resultado.value = "Delta e negativo!";
+    resultado.value = "Delta é negativo!";
   }
 };
