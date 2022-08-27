@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+    justify-content: center;
+}
+
+input {
+    margin-top: 8px;
+}
+
+textarea {
+    margin: 20px 0;
+}

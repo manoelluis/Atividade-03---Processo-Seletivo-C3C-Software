@@ -1,3 +1,12 @@
+body {
+    text-align: center;
+    justify-content: center;
+}
+
+input {
+    margin-top: 12px;
+}
+
 input {
     width: 300px;
 }
