@@ -1,21 +1,25 @@
 const nota = document.querySelector("#nota");
 const resultado = document.querySelector("#resultado");
+const calcular = document.querySelector("#calcular");
 
-function classificaAluno(nota) {
-  const notaCorrigida = arredondar(nota);
-  if (notaCorrigida < 40) {
-    console.log(`Aluno foi reprovado com nota ${notaCorrigida}`);
-  } else {
-    console.log(`Aluno foi aprovado com nota ${notaCorrigida}`);
-  }
-}
+calcular.onclick = () => {
+  const corrigida = arredondar();
 
-function arredondar(nota) {
-  if (nota < 38) {
-    return nota;
-  } else if (nota % 5 >= 3) {
-    return (nota = nota + (5 - (nota % 5)));
+  if (nota.value < 0 || nota.value > 100) {
+    alert("Digite um numero entre 0 e 100");
+  } else if (corrigida < 40) {
+    resultado.value = "Voce foi reprovado :(";
   } else {
-    return (nota = nota - (nota % 5));
+    resultado.value = "Voce foi aprovado! :)";
   }
-}
+};
+
+const arredondar = () => {
+  if (nota.value < 38) {
+    return nota.value;
+  } else if (nota.value % 5 >= 3) {
+    return (nota.value = nota.value + (5 - (nota.value % 5)));
+  } else {
+    return (nota.value = nota.value - (nota.value % 5));
+  }
+};
