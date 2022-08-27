@@ -7,8 +7,19 @@
     <title>Document</title>
   </head>
   <body>
+    <h1>Boletim escolar</h1>
     <label>Digite sua nota:</label>
-    <input type="number" name="notas" id="nota" />
+    <input
+      type="number"
+      name="notas"
+      id="nota"
+      placeholder="Valor de 0 a 100"
+      min="0"
+      max="100"
+    />
+    <br />
+    <label>Voce está:</label>
+    <input type="text" id="resultado" disabled />
 
     <script src="nota.js"></script>
   </body>
